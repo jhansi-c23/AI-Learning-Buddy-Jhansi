@@ -5,6 +5,7 @@ import google.generativeai as genai
 
 # Configure Gemini API
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(page_title="AI Learning Buddy Jhansi", page_icon="🎓")
 
