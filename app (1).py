@@ -2,9 +2,9 @@
 
 import streamlit as st
 import google.generativeai as genai
+import os
 
-# Configure Gemini API
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(page_title="AI Learning Buddy Jhansi", page_icon="🎓")
